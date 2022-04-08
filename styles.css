@@ -1,0 +1,52 @@
+html {
+    /* background-color: rgb(99, 99, 99); */
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: url("Abstract_Background_with_Blue_Triangles.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+.parent {
+    background-color: rgba(216, 216, 216, 0.5);
+    top: 10em;
+    text-align: center;
+    padding: 3%;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+.parent:hover {
+    animation: focusing 0.5s;
+    animation-fill-mode: both;
+}
+@keyframes focusing {
+    0% {
+        background-color: rgba(216, 216, 216, 0.5);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+.instructions {
+    color:#3b74c4;
+    font-style: italic;
+    padding: 0;
+}
+
+label {
+    color: rgb(14, 80, 137);
+    font-weight: 700;
+}
+button {
+    background-color: rgba(54, 125, 187, 0.5);
+    color: #ffffff;
+}
