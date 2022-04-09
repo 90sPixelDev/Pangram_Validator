@@ -1,21 +1,24 @@
 function isPangram(){
     let sentence = document.getElementById('pan-text').value;
     let sen = sentence.toLowerCase();
+    if (sen.length === 0 || sen.length < 26){
+        alert('Not enough characters.');
+        return false;
+    }
     for (let req of 'abcdefghijklmnopqrstuvwxyz'){
         if (sen.includes(req)){
-            alert('This sentence is not a pangram.');
+            alert('VALID PANGRAM!');
             document.getElementById('pan-text').value = '';
+            return true;
+        }
+        else {
+            alert('Not a valid pangram.')
             return false;
         }
     }
-    if (sen === ''){
-        alert('This sentence is not a pangram.');
-        return false;
-    }
-    alert('This sentence is a pangram.');
-    document.getElementById('pan-text').value = '';
-    return true;
+
 }
 
+// Examples:
 // The quick brown fox jumps over a lazy dog
 // The five boxing wizards jump quickly
